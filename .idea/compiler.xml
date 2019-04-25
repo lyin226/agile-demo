@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="agile-demo" />
+        <module name="agile_demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="agile-demo" target="1.5" />
+      <module name="agile-demo" target="1.8" />
+      <module name="agile_demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
