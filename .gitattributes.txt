@@ -1,6 +1,6 @@
-*.html linguist-language=Java
-*.js linguist-language=Java
-*.xml linguist-language=Java
-*.css linguist-language=Java
-*.md linguist-language=Java
-*.sql linguist-language=Java
+*.html linguist-language=html
+*.js linguist-language=html
+*.xml linguist-language=html
+*.css linguist-language=html
+*.md linguist-language=html
+*.sql linguist-language=html
