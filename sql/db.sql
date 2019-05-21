@@ -115,26 +115,6 @@ INSERT INTO `sys_menu` VALUES ('31', '0', 'Swagger', null, null, '0', 'fa fa-cog
 INSERT INTO `sys_menu` VALUES ('32', '31', '在线API', 'swagger/index.html', null, '1', 'fa fa-file-text-o', '1');
 
 -- ----------------------------
--- Table structure for sys_oss
--- ----------------------------
-DROP TABLE IF EXISTS `sys_oss`;
-CREATE TABLE `sys_oss` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `url` varchar(200) DEFAULT NULL COMMENT 'URL地址',
-  `create_date` datetime DEFAULT NULL COMMENT '创建时间',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='文件上传';
-
--- ----------------------------
--- Records of sys_oss
--- ----------------------------
-INSERT INTO `sys_oss` VALUES ('1', 'http://oss.sukeintel.com.qiniudns.com/upload/20190401/1964f6d819b54852a7a87d855f240827.png', '2019-04-01 09:50:31');
-INSERT INTO `sys_oss` VALUES ('2', 'http://oss.sukeintel.com/upload/20190401/35d86809a5564d1c82ec95f5ea33b0aa.png', '2019-04-01 11:01:18');
-INSERT INTO `sys_oss` VALUES ('3', 'http://oss.sukeintel.com/upload/20190401/e0a49d8bd0ee4f66affc526c01e4fc11.png', '2019-04-01 11:03:05');
-INSERT INTO `sys_oss` VALUES ('4', 'http://oss.sukeintel.com/upload/20190401/229117ef71a34d69b113f072f00f2b84.png', '2019-04-01 11:18:18');
-INSERT INTO `sys_oss` VALUES ('5', 'http://oss.sukeintel.com/upload/20190401/4669fb66bea94dc48c75d9b0fbdcc1df.png', '2019-04-01 11:51:56');
-
--- ----------------------------
 -- Table structure for sys_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role`;
