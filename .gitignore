@@ -26,3 +26,5 @@
 .idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml
 logging.path_IS_UNDEFINED/
 .idea/workspace.xml
+/.idea/
+/agile_demo.iml
