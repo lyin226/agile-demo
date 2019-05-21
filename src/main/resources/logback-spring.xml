@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml" />-->
+    <contextName>logback</contextName>
+
+    <!-- 开发、测试环境 -->
+    <springProfile name="dev,test">
+        <property name = "log.path" value="/Users/yiliu/IdeaProjects/agile-demo"/>
+        <logger name="org.springframework.web" level="INFO"/>
+        <logger name="com.agile.demo" level="DEBUG" />
+
+        <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [$logId] [ucId:$ucId][$remoteAddress] [%c{0}][%M][%L][%t] %m%n</pattern>
+                <charset class="java.nio.charset.Charset">UTF-8</charset>
+            </encoder>
+            <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+                <level>INFO</level>
+            </filter>
+        </appender>
+
+        <appender name="logfile"
+                  class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <File> ${logging.path}/agile.demo.log</File>
+            <rollingPolicy
+                    class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <FileNamePattern>
+                    ${logging.path}/agile.demo.%d{yyyy-MM-dd}.log
+                </FileNamePattern>
+                <MaxHistory>30</MaxHistory>
+            </rollingPolicy>
+            <encoder>
+                <pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [$logId] [ucId:$ucId][$remoteAddress] [%c{0}][%M][%L][%t] %m%n</pattern>
+                <charset class="java.nio.charset.Charset">UTF-8</charset>
+            </encoder>
+        </appender>
+
+
+
+        <logger name="org.springframework" level="DEBUG"/>
+        <logger name="org.apache.http" level="DEBUG"/>
+        <logger name="org.apache.shiro" level="DEBUG"/>
+        <logger name="org.apache.ibatis" level="DEBUG"/>
+        <logger name="org.mybatis.spring" level="DEBUG"/>
+        <logger name="org.mybatis.spring.SqlSessionUtils" level="DEBUG"/>
+        <logger name="mapper" level="DEBUG"></logger>
+        <root level="INFO">
+            <appender-ref ref="console"/>
+            <appender-ref ref="logfile"/>
+        </root>
+    </springProfile>
+
+    <!-- 生产环境 -->
+    <springProfile name="pro">
+        <property name = "log.path" value="/home/log"/>
+        <logger name="org.springframework.web" level="INFO"/>
+        <logger name="com.agile.demo" level="DEBUG" />
+
+        <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [$logId] [ucId:$ucId][$remoteAddress] [%c{0}][%M][%L][%t] %m%n</pattern>
+                <charset class="java.nio.charset.Charset">UTF-8</charset>
+            </encoder>
+            <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+                <level>INFO</level>
+            </filter>
+        </appender>
+
+        <appender name="logfile"
+                  class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <File> ${logging.path}/agile.demo.log</File>
+            <rollingPolicy
+                    class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <FileNamePattern>
+                    ${logging.path}/agile.demo.%d{yyyy-MM-dd}.log
+                </FileNamePattern>
+                <MaxHistory>30</MaxHistory>
+            </rollingPolicy>
+            <encoder>
+                <pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [$logId] [ucId:$ucId][$remoteAddress] [%c{0}][%M][%L][%t] %m%n</pattern>
+                <charset class="java.nio.charset.Charset">UTF-8</charset>
+            </encoder>
+        </appender>
+
+        <logger name="org.springframework" level="ERROR"/>
+        <logger name="org.apache.http" level="ERROR"/>
+        <logger name="org.apache.shiro" level="ERROR"/>
+        <logger name="org.apache.ibatis" level="ERROR"/>
+        <logger name="org.mybatis.spring" level="ERROR"/>
+        <logger name="org.mybatis.spring.SqlSessionUtils" level="ERROR"/>
+        <logger name="mapper" level="ERROR"></logger>
+        <root level="INFO">
+            <appender-ref ref="console"/>
+            <appender-ref ref="logfile"/>
+        </root>
+    </springProfile>
+
+</configuration>

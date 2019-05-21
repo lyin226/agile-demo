@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.agile.demo.business.mapper.SysMenuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.agile.demo.business.entity.SysMenu">
+        <id column="menu_id" property="menuId" />
+        <result column="parent_id" property="parentId" />
+        <result column="name" property="name" />
+        <result column="url" property="url" />
+        <result column="perms" property="perms" />
+        <result column="type" property="type" />
+        <result column="icon" property="icon" />
+        <result column="order_num" property="orderNum" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        menu_id, parent_id, name, url, perms, type, icon, order_num
+    </sql>
+
+    <select id="queryAllMenuId" resultType="long">
+        select distinct rm.menu_id from sys_user_role ur
+			LEFT JOIN sys_role_menu rm on ur.role_id = rm.role_id
+		where ur.user_id = #{userId}
+    </select>
+
+    <select id="queryNotButtonList" resultType="com.agile.demo.business.entity.SysMenu">
+        select * from sys_menu where type != 2 order by order_num asc
+    </select>
+
+</mapper>

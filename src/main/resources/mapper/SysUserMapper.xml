@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.agile.demo.business.mapper.SysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.agile.demo.business.entity.SysUser">
+        <id column="user_id" property="userId" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="salt" property="salt" />
+        <result column="email" property="email" />
+        <result column="mobile" property="mobile" />
+        <result column="status" property="status" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, username, password, salt, email, mobile, status, create_user_id, create_time
+    </sql>
+
+    <update id="updatePassword" parameterType="map">
+        update sys_user set `password`=#{newPassword} where user_id = #{userId} and password = #{password}
+    </update>
+
+    <select id="queryAllPerms" resultType="string">
+        select m.perms from sys_user_role ur
+        LEFT JOIN sys_role_menu rm on ur.role_id = rm.role_id
+        LEFT JOIN sys_menu m on rm.menu_id = m.menu_id
+        where ur.user_id = #{userId}
+    </select>
+
+
+</mapper>
