@@ -29,7 +29,7 @@ Agile-demo
 
 项目说明
 ==
-![数据库表设计](https://github.com/lyin226/agile-demo/tree/master/img/agile-demo.jpg)
+！[数据库表设计](https://github.com/lyin226/agile-demo/tree/master/img/agile-demo.jpg)
 
 ![登陆页面](https://github.com/lyin226/agile-demo/tree/master/img/login.jpg)
 
