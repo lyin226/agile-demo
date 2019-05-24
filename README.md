@@ -31,16 +31,16 @@ Agile-demo
 ==
 ！[数据库表设计](https://github.com/lyin226/agile-demo/tree/master/img/agile-demo.jpg)
 
-![登陆页面](https://github.com/lyin226/agile-demo/tree/master/img/login.jpg)
+！[登陆页面](https://github.com/lyin226/agile-demo/tree/master/img/login.jpg)
 
-![首页](https://github.com/lyin226/agile-demo/tree/master/img/index.jpg)
+！[首页](https://github.com/lyin226/agile-demo/tree/master/img/index.jpg)
 
-![管理员管理页面](https://github.com/lyin226/agile-demo/tree/master/img/admin.jpg)
+！[管理员管理页面](https://github.com/lyin226/agile-demo/tree/master/img/admin.jpg)
 
-![角色管理页面](https://github.com/lyin226/agile-demo/tree/master/img/role.jpg)
+！[角色管理页面](https://github.com/lyin226/agile-demo/tree/master/img/role.jpg)
 
-![菜单管理页面](https://github.com/lyin226/agile-demo/tree/master/img/menu.jpg)
+！[菜单管理页面](https://github.com/lyin226/agile-demo/tree/master/img/menu.jpg)
 
-![参数管理页面](https://github.com/lyin226/agile-demo/tree/master/img/param.jpg)
+！[参数管理页面](https://github.com/lyin226/agile-demo/tree/master/img/param.jpg)
 
-![日志管理页面](https://github.com/lyin226/agile-demo/tree/master/img/log.jpg)
+！[日志管理页面](https://github.com/lyin226/agile-demo/tree/master/img/log.jpg)
