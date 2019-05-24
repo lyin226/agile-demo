@@ -30,10 +30,15 @@ Agile-demo
 项目说明
 ==
 1、spring boot与mybatis-plus整合，采用mybatis-plus 的代码生成插件
+
 2、mybatis-plus常用操作
+
 3、登陆使用shiro整合
+
 4、自定义日志注解、缓存注解
+
 5、采用mybatis-plus动态数据源配置，读写分离
+
 ！[数据库表设计](https://github.com/lyin226/agile-demo/tree/master/img/agile-demo.jpg)
 
 ！[登陆页面](https://github.com/lyin226/agile-demo/tree/master/img/login.jpg)
