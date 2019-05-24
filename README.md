@@ -27,5 +27,6 @@ Agile-demo
 5、注意nginx中的前端配置指定login.html文件的路径、后端服务url和应用保持一致，
 源码项目中的mysql配置、redis配置改为本地服务地址，启动后端应用程序、启动nginx服务，然后访问nginx服务地址即可看到登录页。
 
-项目架构图
+项目说明
 ==
+！[Image text](https://github.com/lyin226/agile-demo/tree/master/img/agile-demo.jpg)
